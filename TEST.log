@@ -256,26 +256,3 @@
 2025-03-04 22:53:58,844 [DEBUG]  [[32m[1mdebug    [0m] [1mprocessor.actions.policy_prediction[0m [36mprediction_events[0m=[35m[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x34d9e23a0>][0m
 2025-03-04 22:53:58,844 [DEBUG]  [[32m[1mdebug    [0m] [1mprocessor.actions.log         [0m [36maction_name[0m=[35mutter_goodbye[0m [36mrasa_events[0m=[35m[BotUttered('До свидания! Если появятся вопросы по архитектуре ПО, обращайтесь.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_goodbye"}, 1741118038.843987)][0m
 2025-03-04 22:53:58,844 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x349c20100>}, targets: ['select_prediction'] and ExecutionContext(model_id='3103c5adbe584303a5cbd845617ca156', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
-2025-03-04 22:53:58,844 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
-2025-03-04 22:53:58,844 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
-2025-03-04 22:53:58,844 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
-2025-03-04 22:53:58,844 [DEBUG]  [[32m[1mdebug    [0m] [1mmemoization.predict.actions   [0m [36mtracker_states[0m=[35m[{'user': {'intent': 'goodbye'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'goodbye'}, 'prev_action': {'action_name': 'utter_goodbye'}}][0m
-2025-03-04 22:53:58,845 [DEBUG]  There is a memorised next action 'action_listen'
-2025-03-04 22:53:58,845 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
-2025-03-04 22:53:58,845 [DEBUG]  [[32m[1mdebug    [0m] [1mrule_policy.actions.find      [0m [36mcurrent_states[0m=[35m
-[state 1] user intent: greet | previous action name: action_listen
-[state 2] user intent: greet | previous action name: utter_greet
-[state 3] user intent: ask_architecture | previous action name: action_listen
-[state 4] user intent: ask_architecture | previous action name: utter_architecture_response
-[state 5] user intent: goodbye | previous action name: action_listen
-[state 6] user intent: goodbye | previous action name: utter_goodbye[0m
-2025-03-04 22:53:58,845 [DEBUG]  There is a rule for the next action 'action_listen'.
-2025-03-04 22:53:58,845 [DEBUG]  Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
-2025-03-04 22:53:58,847 [DEBUG]  TED predicted 'action_listen' based on user intent.
-2025-03-04 22:53:58,847 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
-2025-03-04 22:53:58,847 [DEBUG]  Predicted next action using RulePolicy.
-2025-03-04 22:53:58,847 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
-2025-03-04 22:53:58,847 [DEBUG]  [[32m[1mdebug    [0m] [1mprocessor.actions.policy_prediction[0m [36mprediction_events[0m=[35m[][0m
-2025-03-04 22:53:58,847 [DEBUG]  [[32m[1mdebug    [0m] [1mprocessor.actions.log         [0m [36maction_name[0m=[35maction_listen[0m [36mrasa_events[0m=[35m[][0m
-2025-03-04 22:53:58,847 [DEBUG]  No event broker configured. Skipping streaming events.
-2025-03-04 22:53:58,847 [DEBUG]  Deleted lock for conversation 'Sender'.
